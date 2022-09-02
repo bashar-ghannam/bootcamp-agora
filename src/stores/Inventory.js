@@ -14,7 +14,9 @@ export class Inventory {
   }
 
   get numItems() {
-    return this.items.length;
+    let counter = 0;
+    this.items.forEach((item) => (counter += item.quantity));
+    return counter;
   }
 
   addItem = (name, price, quantity) => {

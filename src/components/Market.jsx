@@ -24,7 +24,7 @@ function Market({ agora }) {
         onKeyDown={handleClick}
       />
       <ul>
-        All Inventory :
+        {agora.numItems} Inventory items :
         {agora.items.map((item, index) => {
           return <Item item={item} key={index} />;
         })}
